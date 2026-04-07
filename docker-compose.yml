@@ -1,13 +1,13 @@
 services:
-  api:
+  node-api:
     build:
-      context: ./backend
+      context: ./node-backend
       dockerfile: Dockerfile
     container_name: delivery-api
     ports:
       - "${API_PORT}:${API_PORT}"
     volumes:
-      - ./backend:/app
+      - ./node-backend:/app
       - /app/node_modules
     env_file:
       - .env

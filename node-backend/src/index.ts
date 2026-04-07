@@ -28,7 +28,7 @@ fastify.register(fastifyJwt, {
 fastify.get('/', async (request, reply) => {
   return {
     status: 'ok',
-    message: 'API is running!',
+    message: 'NODE API is running!',
     environment: process.env.NODE_ENV
   }
 })
