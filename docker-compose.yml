@@ -18,6 +18,10 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    command: >
+      sh -c "npx prisma db push && 
+             npx prisma db seed && 
+             npm run dev"
     networks:
       - app-network
   python-api:
