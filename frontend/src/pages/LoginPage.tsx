@@ -36,18 +36,18 @@ const LoginPage = () => {
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
                 <Link to="/" className="flex justify-center items-center gap-2 mb-6">
                     <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-100">
-                        <span className="text-white text-xl font-bold">A</span>
+                        <span className="text-white text-xl font-bold">D</span>
                     </div>
-                    <span className="font-bold text-2xl tracking-tight">Antigravity</span>
+                    <span className="font-bold text-2xl tracking-tight">Delivery APP</span>
                 </Link>
                 <h2 className="text-center text-3xl font-extrabold text-slate-900 tracking-tight">
                     Welcome back
                 </h2>
                 <p className="mt-2 text-center text-sm text-slate-500">
-                    Or{' '}
-                    <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500 underline-offset-4 hover:underline">
-                        create a new account
-                    </a>
+                    Don't have an account?{' '}
+                    <Link to="/register" className="font-medium text-indigo-600 hover:text-indigo-500 underline-offset-4 hover:underline">
+                        Create an account
+                    </Link>
                 </p>
             </div>
 

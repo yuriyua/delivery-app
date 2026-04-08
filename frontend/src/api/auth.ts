@@ -16,3 +16,12 @@ export const login = async (email: string, password: string): Promise<LoginRespo
     })
     return response.data
 }
+
+export const register = async (name: string, email: string, password: string): Promise<LoginResponse> => {
+    const response = await apiClient.post<LoginResponse>('/api/auth/register', {
+        name,
+        email,
+        password,
+    })
+    return response.data
+}
