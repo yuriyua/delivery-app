@@ -4,9 +4,18 @@ from sqlmodel import select, Session
 from database import get_session
 from models import User
 from security import verify_password, create_access_token
-from typing import List
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class LoginRequest(BaseModel):
     email: EmailStr
