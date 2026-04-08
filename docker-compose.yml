@@ -35,6 +35,17 @@ services:
       - db
     networks:
       - app-network
+  frontend:
+    build:
+      context: ./frontend
+    container_name: delivery-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - frontend-node-modules:/app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:3000
   db:
     image: mysql:8.4
     container_name: delivery-db
@@ -60,3 +71,4 @@ networks:
     driver: bridge
 volumes:
   db_data:
+  frontend-node-modules:
